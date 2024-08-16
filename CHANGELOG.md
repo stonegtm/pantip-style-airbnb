@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/stonegtm/pantip-style-airbnb/compare/v1.0.1...v1.0.2) (2024-08-16)
+
+
+### Bug Fixes
+
+* **stone:** for deploy ([38fee7f](https://github.com/stonegtm/pantip-style-airbnb/commit/38fee7ff1f271c9015020e3fa77cf14dbb9aba03))
+
 ## [1.0.1](https://github.com/stonegtm/pantip-style-airbnb/compare/v1.0.0...v1.0.1) (2024-08-16)
 
 
