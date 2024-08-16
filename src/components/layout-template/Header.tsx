@@ -16,8 +16,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div >
-      <header className={"w-full fixed top-0 bg-white"} style={{zIndex:1000}}>
+    <div>
+      <header
+        className={`w-full bg-white ${scrolling ? "fixed top-0 " : ""}`}
+        style={{ zIndex: 1000 }}
+      >
         <div className="container mx-auto h-40 relative">
           <div className="flex flex-row h-20 items-center">
             <div className="basis-1/3 ">

@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import { MdAccountCircle } from "react-icons/md";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";

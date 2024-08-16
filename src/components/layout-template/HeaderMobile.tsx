@@ -1,18 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { DropdownButton } from "../button/ButtonDropdown";
 import { SlideMenu } from "./SlideMenu";
 const HeaderMobile = () => {
-  const [scrolling, setScrolling] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolling(window.scrollY > 50); // Adjust the scroll threshold as needed
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <div style={{ minHeight: "160px" }}>
       <header className={"w-full fixed top-0 bg-white"} style={{zIndex:1000}}>

@@ -47,34 +47,40 @@ const Realtime = () => {
                 <h2>{item.room_name_th}</h2>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
               {item?.topics?.map((topic: any) => (
-                <a href={`https://pantip.com/topic/${topic.topic_id}`}>
-                  <div className="card-header flex justify-center ">
-                    <img
-                      style={{ width: "100%", maxHeight: 250, minHeight: 250 }}
-                      src={topic.thumbnail_url}
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                  <div key={item.id} className="card rounded-lg">
-                    <div className="card-body p-0">
-                      <h5>{topic.title}</h5>
-                      <div className="flex flex-wrap gap-2">
-                        {topic?.tags?.map((tag: any) => (
-                          <span
-                            key={tag.id}
-                            className=""
-                            style={{ color: "rgba(0,0,0,0.7)", fontSize: 10 }}
-                            title={tag.name}
-                          >
-                            {tag.name}
-                          </span>
-                        ))}
+                <div className="p-2">
+                  <a href={`https://pantip.com/topic/${topic.topic_id}`}>
+                    <div className="card-header flex justify-center ">
+                      <img
+                        style={{
+                          width: "100%",
+                          maxHeight: 250,
+                          minHeight: 250,
+                        }}
+                        src={topic.thumbnail_url}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                    <div key={item.id} className="card rounded-lg">
+                      <div className="card-body p-0">
+                        <h5>{topic.title}</h5>
+                        <div className="flex flex-wrap gap-2">
+                          {topic?.tags?.map((tag: any) => (
+                            <span
+                              key={tag.id}
+                              className=""
+                              style={{ color: "rgba(0,0,0,0.7)", fontSize: 10 }}
+                              title={tag.name}
+                            >
+                              {tag.name}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               ))}
             </div>
           </div>

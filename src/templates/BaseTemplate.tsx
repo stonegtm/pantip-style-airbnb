@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import { AppConfig } from "@/utils/AppConfig";
 import { Header } from "@/components/layout-template/Header";
 import { HeaderMobile } from "@/components/layout-template/HeaderMobile";
-import { SlideMenu } from "@/components/layout-template/SlideMenu";
 
 const BaseTemplate = (props: {
   leftNav: React.ReactNode;
@@ -10,14 +9,10 @@ const BaseTemplate = (props: {
   children: React.ReactNode;
 }) => {
   const t = useTranslations("BaseTemplate");
-  // const [activeTab, setActiveTab] = useState(0);
   return (
     <div className="">
       <div className="pc-version">
         <Header />
-        {/* <div>
-          <SlideMenu />
-        </div> */}
       </div>
       <div className="mobile-version">
         <HeaderMobile />

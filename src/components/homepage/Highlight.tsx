@@ -46,21 +46,23 @@ const Hightlight = () => {
         {highlight.map((item: any) => (
           <div key={item.id} className="card rounded-lg p-2">
             <div className="card-header flex justify-center ">
-              <Slider style={{ width: "90%" }} {...carouselSettings}>
-                {item.image_url.map((image: string, index: number) => (
-                  <div key={index} className="carousel-slide">
-                    <img
-                      style={{ width: "100%" }}
-                      src={image}
-                      alt={`Slide ${index}`}
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                ))}
-              </Slider>
+              <div style={{ width: "90%" }}>
+                <Slider {...carouselSettings}>
+                  {item.image_url.map((image: string, index: number) => (
+                    <div key={index} className="carousel-slide">
+                      <img
+                        style={{ width: "100%" }}
+                        src={image}
+                        alt={`Slide ${index}`}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  ))}
+                </Slider>
+              </div>
             </div>
             <div className="card-body p-4">
-              <p style={{fontSize:"14px"}}>{item.name}</p>
+              <h5>{item.name}</h5>
             </div>
           </div>
         ))}
