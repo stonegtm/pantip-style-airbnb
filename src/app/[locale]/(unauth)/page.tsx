@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Hightlight } from "@/components/homepage/Highlight";
+import { Highlight } from "@/components/homepage/Highlight";
 import { Realtime } from "@/components/homepage/Realtime";
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <div className="container mx-auto">
-        <Hightlight />
+        <Highlight />
         <Realtime />
       </div>
     </>
